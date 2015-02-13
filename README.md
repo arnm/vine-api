@@ -13,7 +13,7 @@ Currently only GET requests which do not require authentication are supported.
 (println @(v/timelines-popular {:query-params {:size 1}}))
 ```
 
-Returns a string containing the JSON response to https://vine.co/api/timelines/popular
+Returns a string containing the JSON response to https://vine.co/api/timelines/popular?size=1
 
 ## License
 
