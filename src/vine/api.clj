@@ -26,7 +26,7 @@
                                     (inc idx#))))]
          (apply ~http-func built-path# ~(last fn-args))))))
 
-;; uses
+;; users
 (def-vine-endpoint get "users/profiles/<id>")
 
 ;; timelines
