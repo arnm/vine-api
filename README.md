@@ -4,6 +4,8 @@ A Clojure library designed to wrap the [Unofficial Private Vine API](https://git
 
 ## Usage
 
+[![Clojars Project](http://clojars.org/vine-api/latest-version.svg)](http://clojars.org/vine-api)
+
 Currently only GET requests which do not require authentication are supported.
 
 ``` clojure
