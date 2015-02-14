@@ -16,7 +16,9 @@
                     (string/replace #"<|>" "")
                     (string/replace #"-$" "")
                     symbol)]
-    `(defn ~fn-name ~fn-args
+    `(defn ~fn-name
+       ~(str (.toUpperCase (name method)) " request to " (str http/endpoint resource-path))
+       ~fn-args
        (let [built-path# (loop [path# ~resource-path idx# 0]
                            (if (> idx# (-> ~fn-req-args count dec))
                              path#
