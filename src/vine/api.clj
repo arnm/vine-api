@@ -3,6 +3,7 @@
             [vine.util.http :as http]))
 
 (defmacro ^:private def-vine-endpoint
+  "Constructs a function which requests the Vine resource path"
   [method resource-path]
   (let [http-func (symbol (str "http/v" method))
         fn-req-args (->> resource-path
@@ -28,8 +29,15 @@
                                     (inc idx#))))]
          (apply ~http-func built-path# ~(last fn-args))))))
 
-;; users
-(def-vine-endpoint get "users/profiles/<id>")
+;; channels
+(def-vine-endpoint get "channels/featured")
+
+;; posts
+(def-vine-endpoint get "posts/search/<query>")
+
+;; tags
+(def-vine-endpoint get "tags/trending")
+(def-vine-endpoint get "tags/search/<name>")
 
 ;; timelines
 (def-vine-endpoint get "timelines/posts/<id>")
@@ -43,12 +51,8 @@
 (def-vine-endpoint get "timelines/channels/<id>/recent")
 (def-vine-endpoint get "timelines/venues/<id>")
 
-;; tags
-(def-vine-endpoint get "tags/trending")
-(def-vine-endpoint get "channels/featured")
-
-;; search
+;; users
+(def-vine-endpoint get "users/profiles/<id>")
 (def-vine-endpoint get "users/search/<query>")
-(def-vine-endpoint get "tags/search/<name>")
 
 
