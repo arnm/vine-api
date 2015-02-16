@@ -1,4 +1,4 @@
-(defproject com.alexeinunez/vine-api "0.1.3"
+(defproject com.alexeinunez/vine-api "0.1.4"
   :description "A Clojure library designed to wrap the Unofficial Private Vine API"
   :url "http://github.com/arnm/vine-api"
   :license {:name "Eclipse Public License"
