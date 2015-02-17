@@ -13,5 +13,5 @@
        (apply ~method params#))))
 
 (def-vine-request get)
-; (def-vine-request post)
-; (def-vine-request put)
+(def-vine-request post)
+(def-vine-request delete)
