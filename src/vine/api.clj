@@ -44,7 +44,7 @@
 (def-vine-endpoint false "channels/featured")
 
 ;; posts
-(def-vine-endpoint true "posts/")
+(def-vine-endpoint true "posts")
 (def-vine-endpoint true "posts/<id>")
 (def-vine-endpoint true "posts/<id>/likes")
 (def-vine-endpoint true "posts/<id>/comments")

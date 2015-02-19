@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/core.match  "0.3.0-alpha4"]
-                 [org.clojure/data.json  "0.2.5"]
-                 [http-kit "2.1.18"]
-                 [environ "1.0.0"]]
-  :plugins [[lein-environ "1.0.0"]])
+                 [http-kit "2.1.18"]]
+  :profiles {:d {:dependencies [[org.clojure/data.json "0.2.5"]
+                                [environ "1.0.0"]]
+                 :plugins [[lein-environ "1.0.0"]]}})
