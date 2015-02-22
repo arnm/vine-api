@@ -109,7 +109,7 @@ lein with-profile +d test
 
 You will also have to specify a local ```profiles.clj``` inside of the repo root so that you can specify your test data. This functionality is added by the [Environ](https://github.com/weavejester/environ) Leiningen plugin.
 
-Here is a sample ```profiles.clj``` which has all valid data expect for the user login credentials:
+Here is a sample ```profiles.clj``` which has all valid data except for the user login credentials:
 
 ``` clojure
 {:dev  {:env  {:username "bob"
